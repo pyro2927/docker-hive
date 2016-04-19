@@ -8,5 +8,5 @@ RUN curl -O https://archive.apache.org/dist/hive/hive-#{HIVE_VERSION}/apache-hiv
 	tar -zxvf ./apache-hive-${HIVE_VERSION}-bin.tar.gz &&\
 	mv ./apache-hive-${HIVE_VERSION}-bin $HIVE_HOME &&\
 	rm -f ./apache-hive-${HIVE_VERSION}-bin.tar.gz
-	
-	
+
+ADD hive-site.xml #{HIVE_HOME}/conf/hive-site.xml
